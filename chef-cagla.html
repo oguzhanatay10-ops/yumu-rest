@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+,<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -12,10 +12,9 @@
             background-image: url('https://i.ibb.co/8DDzK9Md/O-P.webp'); 
             background-size: cover; background-position: center;
             background-attachment: fixed; font-family: 'Segoe UI', sans-serif;
-            color: white; /* Tüm yazıları beyaz yapalım, arka planda okunsun */
+            color: white;
         }
 
-        /* 2. ANA KONTEYNER (YUKARIDA) */
         .container {
             margin-top: 40px;
             width: 90%;
@@ -23,37 +22,39 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 30px; /* Bölümler arası boşluk */
+            gap: 30px;
         }
 
-        /* 3. KARAKTER FOTOĞRAFI */
+        /* YENİ ÇERÇEVELİ GÖRSEL ALANI */
         .profile-section {
             text-align: center;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 20px;
-            border: 4px solid #ff4757;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.8); 
+            padding: 25px;
+            border-radius: 15px;
+            border: 6px solid #ff4757;
+            box-shadow: 0 0 20px rgba(255, 71, 87, 0.4);
+            width: fit-content; /* Çerçeve fotoğrafa göre daralsın */
         }
 
         .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 5px solid white;
-            margin-bottom: 10px;
+            width: 250px; /* Boyutu senin görseline göre biraz büyüttüm */
+            height: 250px;
+            border-radius: 10px;
+            border: 3px solid white;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 15px auto; /* Ortala ve altına boşluk bırak */
         }
 
-        .header-title { margin: 10px 0; text-transform: uppercase; font-size: 32px; }
+        .header-title { margin: 10px 0; text-transform: uppercase; font-size: 32px; color: white; }
         .role-badge { background: #ff4757; color: white; padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 16px; }
 
-        /* 4. ÖZELLİKLER VE HİKAYE BÖLÜMLERİ (DİKEY HİYERARŞİ) */
         .details-section {
             background: rgba(255, 255, 255, 0.9);
             color: #2d3436;
             width: 100%;
             border-radius: 15px;
-            border-left: 10px solid #ff4757; /* Şefin imza rengi */
+            border-left: 10px solid #ff4757;
             padding: 25px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
             text-align: left;
@@ -61,19 +62,16 @@
 
         .section-title { font-size: 24px; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; color: #ff4757; }
 
-        /* ÖZELLİKLER LİSTESİ */
         .stats-list { margin: 0; padding: 0; list-style: none; font-size: 18px; line-height: 1.6; }
         .stat-item { border-bottom: 1px solid #ddd; padding: 5px 0; display: flex; justify-content: space-between; }
 
-        /* HİKAYE METNİ */
         .story-text { font-size: 17px; line-height: 1.8; text-align: justify; }
 
-        /* 5. GERİ DÖN BUTONU */
         .back-button {
             margin-top: 20px; margin-bottom: 50px;
             padding: 15px 35px; background: #2d3436; color: white;
             text-decoration: none; border-radius: 10px; font-weight: bold;
-            transition: 0.3s;
+            transition: 0.3s; border: 2px solid white;
         }
 
         .back-button:hover { background: #ff4757; transform: scale(1.05); }
@@ -83,8 +81,7 @@
 
     <div class="container">
         <div class="profile-section">
-            <img src="https://img.icons8.com/fluency/180/female-chef.png" class="profile-img" alt="Şef Çağla">
-            <br>
+            <img src="https://i.ibb.co/m5sThTx2/plate.jpg" class="profile-img" alt="Şef Çağla">
             <span class="role-badge">BAŞ ŞEF / STRATEJİST</span>
             <h1 class="header-title">ŞEF ÇAĞLA</h1>
         </div>
@@ -92,7 +89,7 @@
         <div class="details-section">
             <div class="section-title">📊 MUTFAK ÖZELLİKLERİ</div>
             <ul class="stats-list">
-                <li class="stat-item"><b>Uzmanlık:</b> <span>Hızlı pişirme & Hızlı yakma </span></li>
+                <li class="stat-item"><b>Uzmanlık:</b> <span>Hızlı pişirme & Hızlı yakma</span></li>
                 <li class="stat-item"><b>Pişirme Hızı:</b> <span>⚡⚡⚡⚡⚡</span></li>
                 <li class="stat-item"><b>Organizasyon:</b> <span>⭐⭐⭐⭐⭐</span></li>
                 <li class="stat-item"><b>Favori Alet:</b> <span>Hızlı Mikser</span></li>
