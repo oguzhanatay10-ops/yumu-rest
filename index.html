@@ -5,80 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yumurcak Kitchen: PlateUp Wiki</title>
     <style>
-        /* PLATEUP! LOBİ ARKA PLANI */
+        /* 1. SORUMLULUK: ARKA PLAN (SENİN ATTIĞIN LOBİ GÖRSELİ) */
         body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
             margin: 0; 
+            padding: 0;
+            height: 100vh;
             display: flex; 
             flex-direction: column; 
             align-items: center; 
-            /* LOBİ GÖRSELİNİ BURAYA KOYUYORUZ */
-            background-image: url('https://img.itch.zone/aW1hZ2UvMTA0Mjk4MS81OTM5NTA5LnBuZw==/original/k8Y7b1.png');
+            /* GÖRSELİ BURAYA ÇAKTIK */
+            background-image: url('https://i.ibb.co/8DDzK9Md/O-P.webp'); 
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Görsel sabit kalsın, biz kayalım */
-            height: 100vh;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow: hidden; /* Sayfa sağa sola kaymasın, lobi sabit kalsın */
         }
 
-        /* ÜST BAŞLIK ALANI */
+        /* 2. SORUMLULUK: ÜST KİMLİK (ŞEFFAF VE ŞIK) */
         .header { 
-            padding: 30px 0 10px 0;
+            margin-top: 20px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.7); /* Görselin üzerine hafif beyazlık koydum */
-            width: 100%;
-            border-bottom: 2px solid #ddd;
+            background: rgba(0, 0, 0, 0.6); 
+            padding: 10px 50px;
+            border-radius: 15px;
+            color: white;
+            border: 2px solid #ff4757;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
 
-        .header h1 { font-size: 40px; color: #2d3436; margin-bottom: 5px; text-transform: uppercase; }
-        .header p { color: #636e72; font-style: italic; }
-
-        /* ANA PANEL: KUTULAR BURADA */
+        /* 3. SORUMLULUK: ANA KUTULAR (SENİN DEDİĞİN GİBİ YUKARIDA) */
         .main-panel { 
             display: flex; 
             justify-content: center; 
             gap: 40px; 
-            padding-top: 50px; /* Yukarıdaki mesafeyi ayarladım */
+            margin-top: 60px; /* Kutuları yukarıdaki o stratejik noktaya çektik */
         }
 
-        /* SORUMLULUK BUTONLARI (KUTULAR) */
         .nav-button { 
-            padding: 30px 50px; 
+            padding: 25px 50px; 
             font-size: 22px; 
             font-weight: bold;
             cursor: pointer; 
-            background: rgba(45, 52, 54, 0.9); /* Arka planı hafif şeffaf yaptım */
-            color: #dfe6e9; 
-            border: 3px solid #dfe6e9; 
+            background: rgba(255, 255, 255, 0.95); 
+            color: #2d3436; 
+            border: 3px solid #2d3436; 
             border-radius: 12px;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
         }
 
         .nav-button:hover { 
-            transform: translateY(-5px);
+            transform: scale(1.1);
             background: #ff4757; 
-            border-color: #ffffff;
-            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.5);
+            color: white;
+            border-color: white;
         }
-
-        /* ALTTA AÇILACAK ALANIN İSKELETİ (Adım 2 İçin) */
-        .content-drawer { margin-top: 40px; width: 80%; }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <h1>🏰 YUMURCAK KITCHEN</h1>
-        <p>PlateUp! Profesyonel İşletme Sistemi</p>
-        <hr style="width: 200px; border: 1px solid #ff4757;">
+        <h1 style="margin:0; font-size: 28px;">🏰 YUMURCAK KITCHEN</h1>
     </div>
 
     <div class="main-panel">
         <button class="nav-button">[ 👤 KARAKTERLER ]</button>
         <button class="nav-button">[ 🍽️ YEMEKLER ]</button>
     </div>
-
-    <div class="content-drawer" id="drawer"></div>
 
 </body>
 </html>
