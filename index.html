@@ -5,52 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yumurcak Kitchen: PlateUp Wiki</title>
     <style>
-        /* YUMURCAK FAMILY: CORE STYLES */
+        /* PLATEUP! LOBİ ARKA PLANI */
         body { 
             font-family: 'Segoe UI', Arial, sans-serif; 
-            background: #f8f9fa; 
             margin: 0; 
             display: flex; 
             flex-direction: column; 
             align-items: center; 
+            /* LOBİ GÖRSELİNİ BURAYA KOYUYORUZ */
+            background-image: url('https://img.itch.zone/aW1hZ2UvMTA0Mjk4MS81OTM5NTA5LnBuZw==/original/k8Y7b1.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Görsel sabit kalsın, biz kayalım */
+            height: 100vh;
         }
 
         /* ÜST BAŞLIK ALANI */
         .header { 
-            padding: 30px 0 10px 0; /* Alttan boşluğu azalttım */
+            padding: 30px 0 10px 0;
             text-align: center;
+            background: rgba(255, 255, 255, 0.7); /* Görselin üzerine hafif beyazlık koydum */
+            width: 100%;
+            border-bottom: 2px solid #ddd;
         }
 
-        .header h1 { font-size: 40px; color: #2d3436; margin-bottom: 5px; }
+        .header h1 { font-size: 40px; color: #2d3436; margin-bottom: 5px; text-transform: uppercase; }
         .header p { color: #636e72; font-style: italic; }
 
-        /* ANA PANEL: KUTULARI YUKARI ÇEKTİĞİMİZ YER */
+        /* ANA PANEL: KUTULAR BURADA */
         .main-panel { 
             display: flex; 
             justify-content: center; 
             gap: 40px; 
-            padding-top: 20px; /* Üstten mesafeyi kısalttım, kutular yukarı kalktı */
+            padding-top: 50px; /* Yukarıdaki mesafeyi ayarladım */
         }
 
-        /* SORUMLULUK BUTONLARI */
+        /* SORUMLULUK BUTONLARI (KUTULAR) */
         .nav-button { 
             padding: 30px 50px; 
             font-size: 22px; 
             font-weight: bold;
             cursor: pointer; 
-            background: #2d3436; 
+            background: rgba(45, 52, 54, 0.9); /* Arka planı hafif şeffaf yaptım */
             color: #dfe6e9; 
             border: 3px solid #dfe6e9; 
             border-radius: 12px;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
         }
 
         .nav-button:hover { 
-            transform: translateY(-5px); /* Üste doğru fırlama efekti */
+            transform: translateY(-5px);
             background: #ff4757; 
             border-color: #ffffff;
-            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.3);
+            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.5);
         }
 
         /* ALTTA AÇILACAK ALANIN İSKELETİ (Adım 2 İçin) */
