@@ -42,7 +42,7 @@
             display: none; /* Başta gizli */
             flex-direction: column; /* BUTONLARI ALT ALTA DİZER */
             position: absolute;
-            top: 215px; /* Karakterler butonunun tam altı */
+            top: 215px; 
             background: rgba(45, 52, 54, 0.95);
             padding: 15px;
             border-radius: 12px;
@@ -58,6 +58,7 @@
             cursor: pointer; background: white; color: #2d3436;
             border: none; border-radius: 6px; transition: 0.2s;
             text-decoration: none; text-align: center;
+            display: block;
         }
 
         .sub-button:hover { background: #ff4757; color: white; transform: scale(1.02); }
@@ -75,8 +76,8 @@
     </div>
 
     <div id="karakter-dropdown" onclick="event.stopPropagation()">
-        <a href="#" class="sub-button">👩‍🍳 ŞEF ÇAĞLA</a>
-        <a href="#" class="sub-button">🤵 GARSON AKIN BEY</a>
+        <a href="chef-cagla.html" class="sub-button">👩‍🍳 ŞEF ÇAĞLA</a>
+        <a href="waiter-akin.html" class="sub-button">🤵 GARSON AKIN BEY</a>
     </div>
 
     <script>
