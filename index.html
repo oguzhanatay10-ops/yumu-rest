@@ -5,74 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yumurcak Kitchen: PlateUp Wiki</title>
     <style>
-        /* 1. SORUMLULUK: ARKA PLAN (SENİN ATTIĞIN LOBİ GÖRSELİ) */
+        /* 1. SAHNE: LOBİ ARKA PLANI */
         body { 
-            margin: 0; 
-            padding: 0;
-            height: 100vh;
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            /* GÖRSELİ BURAYA ÇAKTIK */
+            margin: 0; padding: 0; height: 100vh;
+            display: flex; flex-direction: column; align-items: center; 
             background-image: url('https://i.ibb.co/8DDzK9Md/O-P.webp'); 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            overflow: hidden; /* Sayfa sağa sola kaymasın, lobi sabit kalsın */
+            background-size: cover; background-position: center;
+            background-repeat: no-repeat; background-attachment: fixed;
+            overflow: hidden; font-family: 'Segoe UI', sans-serif;
         }
 
-        /* 2. SORUMLULUK: ÜST KİMLİK (ŞEFFAF VE ŞIK) */
+        /* 2. BAŞLIK */
         .header { 
-            margin-top: 20px;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.6); 
-            padding: 10px 50px;
-            border-radius: 15px;
-            color: white;
-            border: 2px solid #ff4757;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            margin-top: 20px; background: rgba(0, 0, 0, 0.7); 
+            padding: 10px 40px; border-radius: 15px; color: white;
+            border: 2px solid #ff4757; box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
 
-        /* 3. SORUMLULUK: ANA KUTULAR (SENİN DEDİĞİN GİBİ YUKARIDA) */
+        /* 3. ANA BUTONLAR (KUTULAR) */
         .main-panel { 
-            display: flex; 
-            justify-content: center; 
-            gap: 40px; 
-            margin-top: 60px; /* Kutuları yukarıdaki o stratejik noktaya çektik */
+            display: flex; justify-content: center; gap: 40px; 
+            margin-top: 60px; z-index: 10;
         }
 
         .nav-button { 
-            padding: 25px 50px; 
-            font-size: 22px; 
-            font-weight: bold;
-            cursor: pointer; 
-            background: rgba(255, 255, 255, 0.95); 
-            color: #2d3436; 
-            border: 3px solid #2d3436; 
-            border-radius: 12px;
-            transition: 0.3s;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            padding: 20px 40px; font-size: 22px; font-weight: bold;
+            cursor: pointer; background: rgba(255, 255, 255, 0.95); 
+            color: #2d3436; border: 3px solid #2d3436; border-radius: 12px;
+            transition: 0.3s; box-shadow: 0 8px 20px rgba(0,0,0,0.6);
         }
 
-        .nav-button:hover { 
-            transform: scale(1.1);
-            background: #ff4757; 
-            color: white;
-            border-color: white;
+        .nav-button:hover { background: #ff4757; color: white; border-color: white; }
+
+        /* 4. FIRLAYAN BUTONLARIN PANELİ */
+        #karakter-dropdown {
+            display: none; /* Başta gizli */
+            position: absolute;
+            top: 220px; /* Karakterler butonunun tam altına hizalı */
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px solid #2d3436;
+            gap: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 5;
         }
+
+        .sub-button {
+            padding: 15px 30px; font-size: 18px; font-weight: bold;
+            cursor: pointer; background: #2d3436; color: white;
+            border: none; border-radius: 8px; transition: 0.2s;
+            text-decoration: none; display: inline-block;
+        }
+
+        .sub-button:hover { background: #ff4757; transform: scale(1.05); }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <h1 style="margin:0; font-size: 28px;">🏰 YUMURCAK KITCHEN</h1>
+        <h1 style="margin:0; font-size: 26px;">🏰 YUMURCAK KITCHEN</h1>
     </div>
 
     <div class="main-panel">
-        <button class="nav-button">[ 👤 KARAKTERLER ]</button>
+        <button class="nav-button" id="btn-karakterler" onclick="event.stopPropagation()">[ 👤 KARAKTERLER ]</button>
         <button class="nav-button">[ 🍽️ YEMEKLER ]</button>
     </div>
+
+    <div id="karakter-dropdown" onclick="event.stopPropagation()">
+        <a href="#" class="sub-button">👩‍🍳 ŞEF ÇAĞLA</a>
+        <a href="#" class="sub-button">🤵 GARSON AKIN BEY</a>
+    </div>
+
+    <script>
+        const btn = document.getElementById('btn-karakterler');
+        const dropdown = document.getElementById('karakter-dropdown');
+
+        // Butona basınca aç/kapat
+        btn.addEventListener('click', () => {
+            if (dropdown.style.display === 'flex') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'flex';
+            }
+        });
+
+        // Dışarıda herhangi bir yere basınca kapat
+        document.body.addEventListener('click', () => {
+            dropdown.style.display = 'none';
+        });
+    </script>
 
 </body>
 </html>
