@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şef Çağla - Yumurcak Kitchen</title>
+    <style>
+        /* 1. SAHNE: AYNI LOBİ ARKA PLANI */
+        body { 
+            margin: 0; padding: 0; min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center; 
+            background-image: url('https://i.ibb.co/8DDzK9Md/O-P.webp'); 
+            background-size: cover; background-position: center;
+            background-attachment: fixed; font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* 2. PERSONEL KARTI (YUKARIDA) */
+        .profile-card {
+            margin-top: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            width: 80%;
+            max-width: 600px;
+            border-radius: 20px;
+            border: 4px solid #ff4757;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #2d3436;
+            margin-bottom: 20px;
+        }
+
+        h1 { color: #2d3436; margin: 10px 0; text-transform: uppercase; }
+        .role-badge { 
+            background: #ff4757; color: white; padding: 5px 15px; 
+            border-radius: 50px; font-weight: bold; font-size: 14px;
+        }
+
+        /* 3. SORUMLULUK ALANLARI (LISTE) */
+        .stats {
+            margin-top: 25px;
+            text-align: left;
+            background: rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .stat-item {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #2d3436;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        /* 4. GERİ DÖN BUTONU */
+        .back-button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: #2d3436;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .back-button:hover { background: #ff4757; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <img src="https://img.icons8.com/fluency/150/female-chef.png" class="profile-img" alt="Şef Çağla">
+        <br>
+        <span class="role-badge">BAŞ ŞEF / STRATEJİST</span>
+        <h1>ŞEF ÇAĞLA</h1>
+        <p><i>"Mutfakta kaos istemiyoruz, sadece profesyonellik."</i></p>
+
+        <div class="stats">
+            <div class="stat-item"><b>Uzmanlık:</b> <span>Otomasyon & Pişirme</span></div>
+            <div class="stat-item"><b>Hız:</b> <span>⚡⚡⚡⚡⚡</span></div>
+            <div class="stat-item"><b>Sabır:</b> <span>⭐⭐⭐⭐</span></div>
+            <div class="stat-item"><b>Favori Alet:</b> <span>Hızlı Mikser</span></div>
+        </div>
+
+        <br><br>
+        <a href="index.html" class="back-button">⬅ ANA MENÜYE DÖN</a>
+    </div>
+
+</body>
+</html>
