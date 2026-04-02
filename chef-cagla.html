@@ -12,63 +12,67 @@
             background-image: url('https://i.ibb.co/8DDzK9Md/O-P.webp'); 
             background-size: cover; background-position: center;
             background-attachment: fixed; font-family: 'Segoe UI', sans-serif;
+            color: white; /* Tüm yazıları beyaz yapalım, arka planda okunsun */
         }
 
-        /* 2. PERSONEL KARTI (YUKARIDA) */
-        .profile-card {
-            margin-top: 50px;
-            background: rgba(255, 255, 255, 0.9);
-            width: 80%;
-            max-width: 600px;
+        /* 2. ANA KONTEYNER (YUKARIDA) */
+        .container {
+            margin-top: 40px;
+            width: 90%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px; /* Bölümler arası boşluk */
+        }
+
+        /* 3. KARAKTER FOTOĞRAFI */
+        .profile-section {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
             border-radius: 20px;
             border: 4px solid #ff4757;
-            padding: 30px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-            border: 5px solid #2d3436;
-            margin-bottom: 20px;
-        }
-
-        h1 { color: #2d3436; margin: 10px 0; text-transform: uppercase; }
-        .role-badge { 
-            background: #ff4757; color: white; padding: 5px 15px; 
-            border-radius: 50px; font-weight: bold; font-size: 14px;
-        }
-
-        /* 3. SORUMLULUK ALANLARI (LISTE) */
-        .stats {
-            margin-top: 25px;
-            text-align: left;
-            background: rgba(0, 0, 0, 0.05);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .stat-item {
+            border: 5px solid white;
             margin-bottom: 10px;
-            font-size: 18px;
-            color: #2d3436;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
         }
 
-        /* 4. GERİ DÖN BUTONU */
+        .header-title { margin: 10px 0; text-transform: uppercase; font-size: 32px; }
+        .role-badge { background: #ff4757; color: white; padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 16px; }
+
+        /* 4. ÖZELLİKLER VE HİKAYE BÖLÜMLERİ (DİKEY HİYERARŞİ) */
+        .details-section {
+            background: rgba(255, 255, 255, 0.9);
+            color: #2d3436;
+            width: 100%;
+            border-radius: 15px;
+            border-left: 10px solid #ff4757; /* Şefin imza rengi */
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            text-align: left;
+        }
+
+        .section-title { font-size: 24px; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; color: #ff4757; }
+
+        /* ÖZELLİKLER LİSTESİ */
+        .stats-list { margin: 0; padding: 0; list-style: none; font-size: 18px; line-height: 1.6; }
+        .stat-item { border-bottom: 1px solid #ddd; padding: 5px 0; display: flex; justify-content: space-between; }
+
+        /* HİKAYE METNİ */
+        .story-text { font-size: 17px; line-height: 1.8; text-align: justify; }
+
+        /* 5. GERİ DÖN BUTONU */
         .back-button {
-            margin-top: 30px;
-            padding: 15px 30px;
-            background: #2d3436;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
+            margin-top: 20px; margin-bottom: 50px;
+            padding: 15px 35px; background: #2d3436; color: white;
+            text-decoration: none; border-radius: 10px; font-weight: bold;
             transition: 0.3s;
         }
 
@@ -77,21 +81,32 @@
 </head>
 <body>
 
-    <div class="profile-card">
-        <img src="https://img.icons8.com/fluency/150/female-chef.png" class="profile-img" alt="Şef Çağla">
-        <br>
-        <span class="role-badge">BAŞ ŞEF / STRATEJİST</span>
-        <h1>ŞEF ÇAĞLA</h1>
-        <p><i>"Mutfakta kaos istemiyoruz, sadece profesyonellik."</i></p>
-
-        <div class="stats">
-            <div class="stat-item"><b>Uzmanlık:</b> <span>Otomasyon & Pişirme</span></div>
-            <div class="stat-item"><b>Hız:</b> <span>⚡⚡⚡⚡⚡</span></div>
-            <div class="stat-item"><b>Sabır:</b> <span>⭐⭐⭐⭐</span></div>
-            <div class="stat-item"><b>Favori Alet:</b> <span>Hızlı Mikser</span></div>
+    <div class="container">
+        <div class="profile-section">
+            <img src="https://img.icons8.com/fluency/180/female-chef.png" class="profile-img" alt="Şef Çağla">
+            <br>
+            <span class="role-badge">BAŞ ŞEF / STRATEJİST</span>
+            <h1 class="header-title">ŞEF ÇAĞLA</h1>
         </div>
 
-        <br><br>
+        <div class="details-section">
+            <div class="section-title">📊 MUTFAK ÖZELLİKLERİ</div>
+            <ul class="stats-list">
+                <li class="stat-item"><b>Uzmanlık:</b> <span>Mikser & Otomasyon</span></li>
+                <li class="stat-item"><b>Pişirme Hızı:</b> <span>⚡⚡⚡⚡⚡</span></li>
+                <li class="stat-item"><b>Organizasyon:</b> <span>⭐⭐⭐⭐⭐</span></li>
+                <li class="stat-item"><b>Favori Alet:</b> <span>Hızlı Mikser</span></li>
+                <li class="stat-item"><b>Kaos Yönetimi:</b> <span>Yüksek</span></li>
+            </ul>
+        </div>
+
+        <div class="details-section">
+            <div class="section-title">📖 PERSONEL HİKAYESİ</div>
+            <p class="story-text">
+                Yumurcak Family mutfağının kalbi ve operasyonun beynidir. Mutfak kaosunu, milimetrik hesaplanmış otomasyon sistemlerine dönüştürmek onun uzmanlık alanıdır. Hızlı mikserine dokunduğu an, mutfakta siparişler jet hızıyla çıkar. "Kaos istemiyoruz, sadece profesyonellik." sözü mutfağın anayasasıdır. Onun liderliğinde, Yumurcak Kitchen her zaman en yüksek performansı hedefler.
+            </p>
+        </div>
+
         <a href="index.html" class="back-button">⬅ ANA MENÜYE DÖN</a>
     </div>
 
