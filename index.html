@@ -22,7 +22,7 @@
             border: 2px solid #ff4757; box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
 
-        /* 3. ANA BUTONLAR (KUTULAR) */
+        /* 3. ANA PANEL (KUTULAR YUKARIDA) */
         .main-panel { 
             display: flex; justify-content: center; gap: 40px; 
             margin-top: 60px; z-index: 10;
@@ -37,28 +37,30 @@
 
         .nav-button:hover { background: #ff4757; color: white; border-color: white; }
 
-        /* 4. FIRLAYAN BUTONLARIN PANELİ */
+        /* 4. ALT ALTA FIRLAYAN KARAKTERLER PANELİ */
         #karakter-dropdown {
             display: none; /* Başta gizli */
+            flex-direction: column; /* BUTONLARI ALT ALTA DİZER */
             position: absolute;
-            top: 220px; /* Karakterler butonunun tam altına hizalı */
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 15px;
-            border: 3px solid #2d3436;
-            gap: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            z-index: 5;
+            top: 215px; /* Karakterler butonunun tam altı */
+            background: rgba(45, 52, 54, 0.95);
+            padding: 15px;
+            border-radius: 12px;
+            border: 2px solid #ffffff;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            z-index: 20;
+            width: 220px;
         }
 
         .sub-button {
-            padding: 15px 30px; font-size: 18px; font-weight: bold;
-            cursor: pointer; background: #2d3436; color: white;
-            border: none; border-radius: 8px; transition: 0.2s;
-            text-decoration: none; display: inline-block;
+            padding: 12px; font-size: 16px; font-weight: bold;
+            cursor: pointer; background: white; color: #2d3436;
+            border: none; border-radius: 6px; transition: 0.2s;
+            text-decoration: none; text-align: center;
         }
 
-        .sub-button:hover { background: #ff4757; transform: scale(1.05); }
+        .sub-button:hover { background: #ff4757; color: white; transform: scale(1.02); }
     </style>
 </head>
 <body>
@@ -81,7 +83,7 @@
         const btn = document.getElementById('btn-karakterler');
         const dropdown = document.getElementById('karakter-dropdown');
 
-        // Butona basınca aç/kapat
+        // Butona basınca alt alta listeyi aç/kapat
         btn.addEventListener('click', () => {
             if (dropdown.style.display === 'flex') {
                 dropdown.style.display = 'none';
@@ -90,8 +92,8 @@
             }
         });
 
-        // Dışarıda herhangi bir yere basınca kapat
-        document.body.addEventListener('click', () => {
+        // Boşluğa (Body) basınca otomatik kapat
+        document.addEventListener('click', () => {
             dropdown.style.display = 'none';
         });
     </script>
