@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurucu Stratejist - Yumurcak Kitchen</title>
+    <style>
+        /* 1. SAHNE: AYNI LOBİ ARKA PLANI */
+        body { 
+            margin: 0; padding: 0; min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center; 
+            background-image: url('https://i.ibb.co/8DDzK9Md/O-P.webp'); 
+            background-size: cover; background-position: center;
+            background-attachment: fixed; font-family: 'Segoe UI', sans-serif;
+            color: white;
+        }
+
+        .container {
+            margin-top: 40px;
+            width: 90%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* YENİ ÇERÇEVELİ GÖRSEL ALANI (ÇAĞLA İLE AYNI) */
+        .profile-section {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8); 
+            padding: 25px;
+            border-radius: 15px;
+            border: 6px solid #ff4757; /* Şefin imza kırmızısı */
+            box-shadow: 0 0 20px rgba(255, 71, 87, 0.4);
+            width: fit-content;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            border: 3px solid white;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+
+        .header-title { margin: 10px 0; text-transform: uppercase; font-size: 32px; color: white; }
+        .role-badge { background: #ff4757; color: white; padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 16px; }
+
+        /* ÖZELLİKLER VE HİKAYE BÖLÜMLERİ */
+        .details-section {
+            background: rgba(255, 255, 255, 0.9);
+            color: #2d3436;
+            width: 100%;
+            border-radius: 15px;
+            border-left: 10px solid #ff4757;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            text-align: left;
+        }
+
+        .section-title { font-size: 24px; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; color: #ff4757; }
+
+        /* ÖZELLİKLER LİSTESİ (SANA ÖZEL) */
+        .stats-list { margin: 0; padding: 0; list-style: none; font-size: 18px; line-height: 1.6; }
+        .stat-item { border-bottom: 1px solid #ddd; padding: 5px 0; display: flex; justify-content: space-between; }
+
+        /* HİKAYE METNİ (SANA ÖZEL) */
+        .story-text { font-size: 17px; line-height: 1.8; text-align: justify; }
+
+        /* GERI DÖN BUTONU */
+        .back-button {
+            margin-top: 20px; margin-bottom: 50px;
+            padding: 15px 35px; background: #2d3436; color: white;
+            text-decoration: none; border-radius: 10px; font-weight: bold;
+            transition: 0.3s; border: 2px solid white;
+        }
+
+        .back-button:hover { background: #ff4757; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-section">
+            <img src="https://i.ibb.co/m5sThTx2/plate.jpg" class="profile-img" alt="Kurucu Stratejist">
+            <span class="role-badge">GÖRÜNMEZ KURUCU ORTAK / TEKNİK DEHA</span>
+            <h1 class="header-title">KURUCU STRATEJİST</h1>
+        </div>
+
+        <div class="details-section">
+            <div class="section-title">📊 STRATEJİK ÖZELLİKLER</div>
+            <ul class="stats-list">
+                <li class="stat-item"><b>Uzmanlık:</b> <span>Siber Strateji & Kodlama</span></li>
+                <li class="stat-item"><b>Planlama Hızı:</b> <span>⚡⚡⚡⚡⚡</span></li>
+                <li class="stat-item"><b>Hata Ayıklama:</b> <span>⭐⭐⭐⭐⭐</span></li>
+                <li class="stat-item"><b>Favori Alet:</b> <span>Klavye & GitHub</span></li>
+                <li class="stat-item"><b>Kaos Yönetimi:</b> <span>Maksimum</span></li>
+            </ul>
+        </div>
+
+        <div class="details-section">
+            <div class="section-title">📖 PERSONEL HİKAYESİ</div>
+            <p class="story-text">
+                Yumurcak Kitchen’ın siber dünyadaki görünmez elidir. Mutfak kaosunu milimetrik hesaplarla otomasyon sistemlerine dönüştüren Şef Çağla’nın en büyük teknolojik destekçisidir. Kurucunun siber stratejileri ve teknolojik dokunuşları olmasaydı, mutfak operasyonu bu kadar kusursuz işleyemezdi. Şef Çağla mutfakta pişirme rekorları kırarken, Kurucu Stratejist ise her zaman bir adım sonrasını planlar ve teknik desteğiyle mutfağın anayasasını yazar. "Kaos istemiyoruz, sadece profesyonellik." sözünün arkasındaki asıl akıldır.
+            </p>
+        </div>
+
+        <a href="index.html" class="back-button">⬅ ANA MENÜYE DÖN</a>
+    </div>
+
+</body>
+</html>
